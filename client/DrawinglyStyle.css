@@ -1,0 +1,132 @@
+html, xmp {
+    font-family: 'Itim', cursive;
+}
+
+xmp {
+    display: inline;
+}
+
+canvas {
+    cursor: crosshair;
+    border: 3px solid #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    background-color: #999;
+}
+
+.right {
+    background-color: #bbb;
+}
+
+#login_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 99;
+}
+
+#login_text, #address_text {
+    width: 250px;
+}
+
+#about_div {
+    max-width: 400px;
+}
+
+#game_div {
+    visibility: hidden;
+}
+
+#tool_container {
+    width: 100%;
+    text-align: center;
+}
+
+#tool_container > label {
+    width: calc(100% / 6);
+    display: inline-block;
+    vertical-align: top;   
+    text-align: center;
+    border: 3px solid black;
+}
+
+.drawing_tool {
+    height: 35px;
+    background-color: white;
+}
+
+#color_yellow { background-color: yellow; }
+#color_black { background-color: #333; }
+#color_grey { background-color: grey; }
+#color_red { background-color: red; }
+#color_green { background-color: green; }
+#color_blue { background-color: blue; }
+#color_yellow { background-color: yellow; }
+#color_orange { background-color: orange; }
+#color_purple { background-color: purple; }
+#color_pink { background-color: pink; }
+#color_brown { background-color: brown; }
+
+.slider {
+    appearance: none;
+    width: 80px;
+    border: 0;
+    cursor: pointer;
+}
+
+#drawer_display {
+    display: inline;
+}
+
+#time_span {
+    float: right;
+}
+
+#time_display {
+    display: inline;
+}
+
+#word_span {
+    float: right;
+}
+
+#word_display {
+    display: inline
+}
+
+#player_list {
+    overflow-y: scroll;
+    height: 83px;
+}
+
+#chat_content {
+    overflow-y: scroll;
+    word-break: break-word;
+    height: 346px;
+    width: 400px
+}
+
+#chat_text {
+    width: 400px
+}

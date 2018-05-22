@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Drawingly</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="DrawinglyStyle.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+        <div id="game_div">
+            <div class="row">
+                <div class="column left">
+                    <canvas id="canvas" width="650" height="450"></canvas>
+                    <br>
+                    <div id="tool_container">
+                        <label class="drawing_tool"><input type="radio" name="drawing_tool" onclick="use_tool('draw');" checked="true"/>Draw</label>
+                        <label class="drawing_tool"><input type="radio" name="drawing_tool" onclick="use_tool('erase');"/>Erase</label>
+                        <label class="drawing_tool"><input type="radio" name="drawing_tool" onclick="use_tool('fill');"/>Fill</label>
+                        <label class="drawing_tool"><input type="range" class="slider" id="thickness_slider" min="2" max="14" value="2"></label>
+                        <label class="drawing_tool" onclick="clear_canvas();">Clear</label>
+                        <br>
+                        <label id="color_black"><input type="radio" name="drawing_color" onclick="select_color('black')" checked="true"/></label>
+                        <label id="color_grey"><input type="radio" name="drawing_color" onclick="select_color('grey')"/></label>
+                        <label id="color_red"><input type="radio" name="drawing_color" onclick="select_color('red')"/></label>
+                        <label id="color_green"><input type="radio" name="drawing_color" onclick="select_color('green')"/></label>
+                        <label id="color_blue"><input type="radio" name="drawing_color" onclick="select_color('blue')"/></label>
+                        <br>
+                        <label id="color_yellow"><input type="radio" name="drawing_color" onclick="select_color('yellow')"/></label>
+                        <label id="color_orange"><input type="radio" name="drawing_color" onclick="select_color('orange')"/></label>
+                        <label id="color_purple"><input type="radio" name="drawing_color" onclick="select_color('purple')"/></label>
+                        <label id="color_pink"><input type="radio" name="drawing_color" onclick="select_color('pink')"/></label>
+                        <label id="color_brown"><input type="radio" name="drawing_color" onclick="select_color('brown')"/></label>
+                        <br>
+                    </div>
+                </div>
+                
+                <div class="column right">
+                    <div>
+                        <b>Drawing Player: </b>
+                        <div id="drawer_display"> - </div>
+                        <span id="time_span">
+                            <b>Time:</b> 
+                            <div id="time_display">XX:XX</div>
+                        </span>
+                    </div>
+                    <br>
+                    <b>
+                        Scoreboard 
+                        <span id="word_span">
+                            <div id="word_display"> - </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        </span>
+                    </b>
+                    <div id="player_list"> - </div>
+                    <br>
+                    <b>Chat & Guesses</b>
+                    <div id="chat_content"> <xmp></xmp> </div>
+                    <input id="chat_text" type="text" placeholder="Guess the word..."/>
+                </div>
+            </div>
+        </div>
+        
+        <div id="login_div">
+            <div>
+                <h1>Welcome to Drawingly!</h1>
+                <br><br>
+                <input id="address_text" type="text" placeholder="Enter the server address.  (IP:PORT)" value="35.198.132.56:8887"/>
+                <br><br>
+                <input id="login_text" type="text" placeholder="Enter your name."/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="login_button" type="button" value="Play" onclick="login();" />
+                <br><br><br>
+                <div id="login_status"><i>Version 0.1.0 &nbsp; (<a id="about_link" href="#">About</a>)</i></div>
+                <div id="about_div"></div>
+            </div>
+        </div>
+        
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="DrawinglyScript.js"></script>
+    
+</html>

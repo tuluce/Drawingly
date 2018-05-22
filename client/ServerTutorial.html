@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Drawingly Server Tutorial</title>
+        <meta charset="UTF-8">
+        <style>
+            html { font-family: 'Itim', cursive; }
+            #tutorial { width: 700px; margin: auto; }
+            li { margin: 15px; }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+        <div id="tutorial">
+        
+            <h1>Drawingly Server Tutorial</h1>
+            <p>The two main drives of <i>Drawingly</i> project are making a "portable" and "customizable" game. This tutorial will show how to start your own <i>Drawingly</i> game server and how to customize it as you want.
+            <br>
+            <br>
+            <br>
+
+            <h2>Starting the Server</h2>
+            Starting your own game server is simple in <i>Drawingly</i>.
+            <ol type="1">
+                <li>Check if Java is installed on your system. If not, download and install from its <a target="_blank" href="http://www.java.com/download">official page</a>.
+                <li>Download <a target="_blan" href="https://github.com/eminbahadir98/Drawingly/releases/download/v0.1.0/DrawinglyServer.zip">this zip file</a> that contains the server folder.
+                <li>Extract the contents of the zip file to a folder: "DrawinglyServer.jar, StartServer.bat, StartServer.sh, config.json, words.txt"
+                <li>Make sure that the PORT number that is writing in "config.json" file (on the first line) is open for your router. (See <a target="_blank" href="http://www.google.com.tr/search?q=How+to+open+a+port%3F">these pages</a> for more info.)
+                <li>For Windows, run "StartServer.bat" file, for Linux/Mac run "StartServer.sh" file.
+                <li>Share the IP address of your computer and the PORT number that you have set in your "config.json" file to the players that will connect to your server.
+            </ol>
+            <br>
+            
+            <h2>Customizing the Server</h2>
+            <p>Before starting the server, you can configure the game that you want to run on the server.
+            <ul>
+            <li>By editing "config.json" file that is located in the server folder, you can modify some of the parameters about the game. (turn timer, guessing/drawing scores, maximum number of players, etc.)
+            <li>You can specify the words that will come up in the game, by listing them in the file "words.txt".
+            </ul>
+            <br>
+            <br>
+            
+        </div>
+        
+    </body>
+    
+</html>
