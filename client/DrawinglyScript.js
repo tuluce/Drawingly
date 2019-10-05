@@ -25,7 +25,7 @@ var loginStatus = document.getElementById('login_status');
 var loading = false;
 var playerName;
 
-var wsUri = "ws://127.0.0.1:8887";
+var wsUri = "wss://127.0.0.1:8887";
 var webSocket;
 var canvasData;
 var players;
@@ -236,7 +236,7 @@ function login() {
         aboutOpen = false;
         checkAbout();
         var addressText = document.getElementById('address_text');
-        wsUri = "ws://" + addressText.value;
+        wsUri = "wss://" + addressText.value;
         var loginText = document.getElementById('login_text');
         loginText.value = clearInvalids(loginText.value);
         if (loginText.value.length < 1) {

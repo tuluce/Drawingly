@@ -454,6 +454,9 @@ public class DrawinglyServer extends WebSocketServer {
             Object object = jsonParser.parse(configReader);
             JSONObject jsonObject = (JSONObject) object;
             int serverPort = ((Long) jsonObject.get("serverPort")).intValue();
+            if (System.getenv("PORT") != null) {
+                serverPort = Integer.parseInt(System.getenv("PORT"));
+            }
             int maxPlayerNum = ((Long) jsonObject.get("maxPlayerNum")).intValue();
             int roundTime = ((Long) jsonObject.get("roundTime")).intValue();
             int idleTime = ((Long) jsonObject.get("idleTime")).intValue();
