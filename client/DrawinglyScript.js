@@ -287,7 +287,9 @@ function onClose(evt) {
     } else if (evt.code == 4002) {
         writeStatus("Please enter a valid server address.");
     } else if (evt.code == 4003) {
-        writeStatus("This server is full.");
+        writeStatus("This server is full.")
+    } else if (evt.code == 4004) {
+        writeStauts("Request can't be processed");
     } else {
         writeStatus("Disconnected. (Error Code: " + evt.code + ")");
     }
